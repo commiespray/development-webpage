@@ -1,0 +1,216 @@
+/*START OF MAIN CSS*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.background {
+    display: flex;
+    width: 100%;
+    background: linear-gradient(-45deg, #3443eb, #34a1eb, #34ebcf, #34eb61, #7aeb34);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+body, .nav, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    top: 55%;
+    position: absolute;
+    background-color: black;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ .menu {
+    width: 550px;
+}
+
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.menu li a:hover {
+    color: lightgray;
+}
+
+.nav input {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.nav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: white;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.nav input:checked ~ span {
+    background-color: white;
+}
+
+.nav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.nav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.nav span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.nav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.title {
+    display: flex;
+    width: max-content;
+    justify-content: center;
+    font-family: 'Garamond';
+}
+
+.title h1 {
+    overflow: hidden;
+    border-right: .15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .10em;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { 
+        width: 0%; 
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white;}
+}
+
+/* END OF MAIN CSS*/
+
+/* START OF CSS FOR CONTENT PAGES*/
+.NavForContentPages {
+    position: relative;
+    background-color: black;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+    margin-top: 10px;
+}
+
+.NavForContentPages input:checked ~ .menu {
+    width: 550px;
+}
+
+.NavForContentPages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavForContentPages input {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.NavForContentPages span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: white;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.NavForContentPages input:checked ~ span {
+    background-color: white;
+}
+
+.NavForContentPages span:nth-child(2) {
+    transform: translateY(-8px);
+}
+
+.NavForContentPages input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.NavForContentPages span:nth-child(3) {
+    transform: translateY(8px);
+}
+
+.NavForContentPages input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+/*END OF CSS FOR CONTENT PAGES*/
